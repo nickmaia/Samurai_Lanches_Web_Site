@@ -140,7 +140,7 @@ nav ul li a {
     color: var(--p-color);
 }
 #home {
-    background-image: url('../Samurai/um.jpg'); /*Imagem de fundo*/
+    background-image: url('../imagens/um.jpg'); /*Imagem de fundo*/
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
