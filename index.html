@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samurai Lanches</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Halant:wght@300;400;600&family=Nunito+Sans:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#about">História</a></li>
+            <li><a href="#projects">cardápio</a></li>
+            <li><a href="#contact">Contatos</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h1>
+            <span>Bem vindo ao</span>
+            <strong> SAMURAI LANCHES </strong>
+            <span> aproveite nosso </span>
+            <strong> DELICIOSO cardápio</strong>
+        </h1>
+    </section>
+
+    <section id="about">
+        <h5>História</h5>
+        <div class="about-container">
+            <div class="about-image">
+                <img width="200px" src="./Samurai/Perfil.jpg" alt="Samurai" />
+            </div>
+            <p> Começamos em um ponto bem pequeno tananan</p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h5> Em breve teremos novas atualizações </h5>
+        <div class="container">
+
+            <a target="_blank" href="./Samurai/Cardapio.pdf" class="card" download>
+                <div class="image-container">
+                    <img width="200px"
+                        src="./Samurai/capa 1 .png"
+                        alt="cardapio" />
+                </div>
+                <h6>cardapio</h6>
+                <p>Click aqui para fazer o download</p>
+            </a>
+            
+        </div>
+    </section>
+
+    <section id="contacts">
+        <h5>Contatos</h5>
+        <div class="contacts-container">
+            <form action="https://formspree.io/f/mdoypzwo" method="POST">
+                <div class="input-container">
+                    <label for="name">Nome e sobrenome:</label>
+                    <input type="text" name="name" id="name" placeholder="Seu nome" />
+                </div>
+                <div class="input-container">
+                    <label for="email">E-mail:</label>
+                    <input type="email" name="email" id="email" placeholder="Seu E-mail" />
+                </div>
+                <div class="text-area-container">
+                    <label for="message">Mensagem:</label>
+                    <textarea rows="5" name="message" id="message" placeholder="Digite o texto"></textarea>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+
+            <div class="contacts-content">
+                <div class="say-hello">
+                    <h4>Entre em contato:</h4>
+                    <p><i class="fas fa-phone-alt"></i> (DD) 00000-0000 </p>
+                </div>
+                <div class="email-plus-links">
+                    <p>
+                        <a target="_blank" href="mailto:lanchessamurai9@gmail.com" class="contacts-email">
+                            <i class="fas fa-at"></i>
+                            lanchessamurai9@gmail.com
+                        </a>
+                    </p>
+                    <p>
+                        <a target="_blank" href="https://www.google.com.br/maps/place/Centro,+Uberaba+-+MG/@-19.7494031,-47.9394784,16z/data=!4m5!3m4!1s0x94bad0338395c297:0xec09cad33549efdb!8m2!3d-19.7474612!4d-47.9354259?hl=pt-BR"
+                            class="contacts-localization">
+                            <i class="fas fa-map-marked-alt"></i>
+                            Localização
+                        </a>
+                    </p>
+                    <ul>
+                        <li><a target="_blank" href="https://www.facebook.com/LanchesSamurai" rel="noopener"
+                                class="fab fa-facebook"></a></li>
+                        <li><a target="_blank" href="https://www.instagram.com/lanchessamurai9/" rel="noopener"
+                                class="fab fa-instagram"></a></li>
+                        <li><a target="_blank" href="https://web.whatsapp.com/" rel="noopener" class="fab fa-whatsapp"></a></li>
+
+                    </ul>
+                </div>
+            </div>
+    </section>
+
+    <button onclick="totop()" id="to-top-btn"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>

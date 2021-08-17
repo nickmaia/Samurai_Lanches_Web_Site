@@ -1,0 +1,421 @@
+/* CSS HEX */
+/* root é oque define a variavel*/
+
+    /*Cores*/
+:root {
+    --primary-color:       #ffaf01;      /*A cor que da a identidade no site*/
+    --primary-color-light: #f8bb37;
+    --white-color:         #fff;
+    --p-color:             #ff590d;
+    --menu-bg-color:       #621708;
+    --ver-al-color:        #921b0c;
+    --dark-color:          #220901;
+    --dark-shadow-color:   #3d3d3d11;
+    --dark-shadow-light:   #6d6d6d69;
+
+    /*Tipografia*/
+    --heading-font-family:     'Halant', serif;
+    --base-font-family:        'Nunito Sans', sans-serif;
+    --font-weight-bold:         600;
+    --font-weight-normal:       400;
+    --font-weight-light:        300;
+
+    --h1-font-size:             56px;
+    --h2-font-size:             48px;
+    --h3-font-size:             38px;
+    --h4-font-size:             34px;
+    --h5-font-size:             30px;
+    --h6-font-size:             24px;
+    --p-font-size:              18px;
+    --base-font-size:           16px;
+    --button-font-size:         20px;
+
+    /*Bordas*/
+    --border-radius-large:      100%;
+    --border-radius-medium:     80px;
+    --border-radius-small:      40px;
+    --border-radius-mini:       4px;
+}
+
+/*Tipografia geral*/
+
+body {
+    font-family: var(--base-font-family);
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font-family);
+}
+/*Tamanho das fontes*/
+h1 {
+    font-size: var(--h1-font-size);
+}
+h2 {
+    font-size: var(--h2-font-size);
+}
+h3 {
+    font-size: var(--h3-font-size);
+}
+h4 {
+    font-size: var(--h4-font-size);
+}
+h5 {
+    font-size: var(--h5-font-size);
+}
+h6 {
+    font-size: var(--h6-font-size);
+}
+/*Peso das fontes*/
+h1, h2, h3, h4, h5, h6 {
+    font-weight: var(--font-weight-bold);
+}
+
+p {
+    font-size: var(--p-font-size);
+    font-weight: var(--font-weight-light);
+    line-height: 2em; /*Espaçamento entre as linhas*/
+    letter-spacing: 0.3px;/*Espaçamento entre as letras*/
+    color: var(--p-color);
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+a {
+    font-size: var(--p-font-size);
+    font-family: var(--base-font-family);
+}
+
+input, textarea {
+    font-family: var(--base-font-family);
+}
+
+
+/*    CSS RESET iremos resetar todas as fontes padrao do HTML e para isso colocamos *{}     */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*Estilização global*/
+
+a {
+    text-decoration: none;
+}
+
+ul, ol {
+    list-style: none;
+}
+/*Para que a abertura de outro navegador fique mais suave*/
+html {
+    scroll-behavior: smooth;
+}
+/*Tamanho minimo das seções e vh é o tamanho da tela*/
+section {
+    min-height: 100vh;
+    padding: 64px/*em cima e embaixo*/ 16px/*Laterais*/; /*Espaçamento entre a borda e o conteudo*/
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/*Barra de navegação*/
+nav{
+    background: var(--menu-bg-color);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;/*alinhamento a esquerda se fosse a direita seria flex-end*/
+}
+nav ul {
+    height: 100%; /*Altura*/
+    width: 100%; /*Largura*/
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+nav ul li {
+    padding: 8px 16px ;
+}
+nav ul li a {
+    color: var(--p-color);
+}
+#home {
+    background-image: url('../Samurai/um.jpg'); /*Imagem de fundo*/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#home h1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#home h1 span {
+    font-size: var(--h3-font-size);
+    color: var(--dark-color);
+}
+#home h1 strong {
+    font-size: var(--h2-font-size);
+    text-transform: uppercase; /*Deixa todas a letras maiusculas */
+    color: var(--primary-color);
+}
+
+/*========about============*/
+#about h5{
+    text-align: center;
+    margin-bottom: 32px;
+    text-transform: uppercase;
+    color: var(--primary-color);
+}
+/*  Quando é classe referencia com um . e quando é um id refrencia com um #  */
+#about .about-container {
+    display: grid;
+    grid-template-columns: 250px 550px;  /*Deixa a imagem do lado do paragrafo*/
+    column-gap: 32px;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+
+@media (max-width: 900px) {
+
+    #about .about-container{
+        display: block;
+        width: 90%;
+    }
+
+    #about .about-container .about-image img{
+        text-align: center;
+        margin-bottom: 24px;
+    }
+
+}
+
+
+#about .about-container .about-image img{
+    width: 220px;
+    height: 220px;
+    border-radius: var(--border-radius-large);
+    box-shadow: 2px 1px 4px 2px var(--dark-color); /*Sombra*//* Horizontal, Vertical, aonde a sombra esta espalhando, grossura */
+    object-fit: cover;
+}
+/*Projects*/
+#projects{
+    text-align: center;
+    margin-bottom: 32 px;
+    text-transform: uppercase;
+    color: var(--primary-color);
+}
+#projects .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+#projects .container .card{
+    padding: 32px;
+    border-radius: var(--border-radius-small);
+    box-shadow: 2px 1px 4px 2px var(--dark-shadow-color);
+    border: 1px solid var(--dark-shadow-color);
+    height: 330px;
+    max-width: 450px;
+    margin: 16px;
+    transition: 300ms;
+}
+#projects .container .card .image-container{
+    width: 100%;
+    height: 150px;
+}
+#projects .container .card .image-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--border-radius-mini);
+}
+#projects .container .card h6{
+    width: 100%;
+    color: var(--primary-color);
+    margin-top: 16px;
+
+}
+#projects .container .card:hover{
+    transform: translateY(-16px);
+    box-shadow: 2px 1px 4px 2px var(--dark-shadow-light);
+}
+
+/*=========contacts=================*/
+
+#contacts h5{
+    text-align: center;
+    margin-bottom: 32px;
+    text-transform: uppercase;
+    width: 100%;
+    color: var(--primary-color);
+}
+
+#contacts .contacts-container {
+    display: grid;
+    grid-template-columns: 450px auto;
+    column-gap: 64px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+@media (max-width: 900px) {
+    #contacts .contacts-container {
+        display: block;
+        width: 90%;
+    }
+}
+
+
+#contacts form{
+    border: none;
+    box-shadow: var(--dark-shadow-color);
+    border-radius: var(--border-radius-small);
+    padding: 32px;
+}
+#contacts .input-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+#contacts label {
+    color: var(--p-color);
+}
+#contacts input, textarea {
+    padding: 8px 16px;
+    border: 2px solid #dcdc;
+    border-radius: var(--border-radius-mini);
+    outline: 0;
+    transition: 300ms;
+    margin-top: 4px;
+    margin-bottom: 16px;
+}
+#contacts textarea {
+    width: 100%;
+}
+#contacts textarea:focus,
+#contacts input:focus{
+    border-color: var(--primary-color);
+}
+#contacts button{
+    border-radius: var(--border-radius-mini);
+    background-color: var(--primary-color);
+    padding: 8px 16px;
+    border: none;
+    width: 100%;
+    transition: 300ms;
+}
+#contacts button:hover{
+    background-color: var(--primary-color-light); /*quando passar o mouse por cima do botão ele fica mais claro*/
+}
+#contacts .contacts-email{ /*parte do email*/
+    color: var(--ver-al-color);
+    font-weight: 400;
+}
+#contacts ul{ /*parte da lista de facebook,instagram,redes sociais*/
+    margin: 8px 0;
+    display: flex;
+    justify-content: flex-start;/*parte que deixa todos os icones em uma linha e com alinhamento a esquerda*/
+    align-items: center;
+}
+#contacts ul a{
+    color: var(--ver-al-color);
+    font-size: var(--h5-font-size);
+    margin: 5px 20px 5px 0;
+    transition: 300ms;
+}
+#contacts ul a:hover{
+    color: var(--dark-color);
+    transform: translateY(-8px);
+}
+#contacts .contacts-localization{
+    color: var(--ver-al-color);
+    font-weight: 400;
+}
+
+
+@media (max-width: 900px) {
+    #contacts .contacts-content {
+        margin: 64px 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #contacts .contacts-content ul{
+        margin: 0;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+
+/*Botão que sobe até o começo da pagina*/
+#to-top-btn {
+    width: 48px;
+    height: 48px;
+    position: fixed; /*O botão fixa*/
+    bottom: 20px;
+    right: 20px;
+    z-index: 99; /*elevação para cima*/
+    border: none;
+    outline: none;
+    background: var(--primary-color);
+    cursor: pointer;
+    padding: 15px;
+    border-radius: var(--border-radius-large);
+    font-size: var(--p-font-size);
+    transition: 300ms;
+    display: none;
+}
+#to-top-btn:hover{
+    background: var(--dark-color) ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
